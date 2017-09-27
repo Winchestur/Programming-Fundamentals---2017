@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication103
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int PeshoDamage = int.Parse(Console.ReadLine());
+            int GoshoDamage = int.Parse(Console.ReadLine());
+
+            int GoshoLife = 100;
+            int PeshoLife = 100;
+            int count = 0;
+            while (PeshoLife != 0||GoshoLife !=0)
+            {
+                count++;
+               
+                if (count % 2 !=1)
+                {
+                    PeshoLife = PeshoLife - GoshoDamage;
+                    if (PeshoLife > 0)
+                    {
+                        Console.WriteLine($"Gosho used Thunderous fist and reduced Pesho to {PeshoLife} health.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Gosho won in {count}th round.");
+                        break;
+                    }
+                }
+                else if (count % 2 == 1)
+                {
+                    GoshoLife = GoshoLife - PeshoDamage;
+                    if (GoshoLife > 0)
+                    {
+                        Console.WriteLine($"Pesho used Roundhouse kick and reduced Gosho to {GoshoLife} health.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Pesho won in {count}th round.");
+                        break;
+                    }
+                }
+                if (count % 3 == 0)
+                {
+                    PeshoLife = PeshoLife + 10;
+                    GoshoLife = GoshoLife + 10;
+                }
+
+               
+            }
+
+
+        }
+    }
+}
+
+        
+
+        
+        
+
+    
+
+                
+            
+                    
+                
+            
+        
+    
+

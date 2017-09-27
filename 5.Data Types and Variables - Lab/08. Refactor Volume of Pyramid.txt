@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication105
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double volume = 0;
+           
+            Console.Write("Length: ");
+            double lenght = double.Parse(Console.ReadLine());
+
+            Console.Write("Width: ");
+            double Width = double.Parse(Console.ReadLine());
+
+            Console.Write("Height: ");
+            double Heigth = double.Parse(Console.ReadLine());
+
+            volume = (lenght * Width * Heigth)/3;
+            Console.WriteLine("Pyramid Volume: {0:F2}", volume);
+
+        }
+    }
+}

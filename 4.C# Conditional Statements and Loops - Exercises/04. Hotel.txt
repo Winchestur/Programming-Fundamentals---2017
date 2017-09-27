@@ -1,0 +1,79 @@
+using System;
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+        {
+            
+
+            string month = Console.ReadLine();
+            int nightcounts = int.Parse(Console.ReadLine());
+
+            double Studio = 0.0;
+            double Dobule = 0.0;
+            double Suite = 0.0;
+
+            switch (month)
+            {
+                case "May":
+                case "October":
+                    {
+                       
+                        Studio = 50;
+                        Dobule = 65;
+                         Suite = 75;
+                        if (nightcounts > 7)
+                        {
+                            Studio *= 0.95;
+                            
+                        }
+                    }
+                    break;
+                case "June":
+                case "September":
+                    {
+                       
+                        Studio = 60 ;
+                        Dobule = 72 ;
+                        Suite = 82 ;
+                        if (nightcounts > 14)
+                        {
+                            
+                            Dobule *= 0.90;
+                        }
+                    }
+                    break;
+                case "July":
+                case "August":
+                case "December":
+                    {
+                       
+                        Studio = 68;
+                        Dobule = 77;
+                        Suite = 89 ;
+                        if (nightcounts > 14)
+                        {
+                            
+                            Suite *= 0.85;
+                        }
+
+                    }
+                    break;
+            }
+            double endPriceStudio = Studio * nightcounts;
+            double endPriceDouble = Dobule * nightcounts;
+            double endPriceSuite = Suite * nightcounts;
+
+            if ((month == "September" || month == "October") && nightcounts > 7)
+            {
+                endPriceStudio -= Studio;
+            }
+
+            Console.WriteLine($"Studio: {endPriceStudio:F2} lv.");
+            Console.WriteLine($"Double: {endPriceDouble:F2} lv.");
+            Console.WriteLine($"Suite: {endPriceSuite:F2} lv.");
+            
+        }
+    }
+}
+    

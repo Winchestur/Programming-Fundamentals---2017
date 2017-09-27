@@ -1,0 +1,28 @@
+using System;
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+        {
+            int count = 0;
+            try
+            {
+                int number = int.Parse(Console.ReadLine());
+
+                while (number != 0)
+                {
+
+                    count++;
+
+                    number = int.Parse(Console.ReadLine());
+
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(count);
+            }
+        }
+    }
+}
+    

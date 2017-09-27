@@ -1,0 +1,46 @@
+using System;
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+        {
+
+            int Cheese = 500;
+            int toMatOsause = 150;
+            int salami = 600;
+            int Pepper = 50;
+
+
+            int CountOfWords = int.Parse(Console.ReadLine());
+            
+            int result = 0;
+
+            for (int i = 1; i <= CountOfWords; i++)
+            {  
+
+               string word = Console.ReadLine().ToLower();
+                
+                if (word =="cheese")
+                {
+                    result += Cheese;
+                }
+                if (word == "tomato sauce")
+                {
+                    result += toMatOsause;
+                }
+                 if (word == "salami")
+                {
+                    result += salami;
+                }
+                 if (word == "pepper")
+                {
+                    result += Pepper;
+                }
+              
+
+            }
+            Console.WriteLine($"Total calories: {result}");
+        }
+    }
+}
+    

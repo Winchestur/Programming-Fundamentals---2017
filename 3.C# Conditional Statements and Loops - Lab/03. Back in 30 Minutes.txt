@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication100
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int hours = int.Parse(Console.ReadLine());
+            int minutes = int.Parse(Console.ReadLine());
+
+           
+                int hour= hours % 60;
+                int minute = minutes  %60 + 30;
+
+            if (minute > 59 )
+            {
+                 hour += 1;
+                minute -=60 ;
+                if (minute>119)
+                {
+                    minute = minute / 60 / 60 % 60;
+                    hour += 2;
+                }
+                if (hour >23)
+                {
+                    hour -= 24;
+                }
+            }
+            Console.WriteLine($"{hour}:{minute:D2}");
+            
+        }
+    }
+}

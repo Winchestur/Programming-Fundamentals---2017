@@ -1,0 +1,40 @@
+using System;
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+        {
+
+            string profession = Console.ReadLine();
+            double quantity = double.Parse(Console.ReadLine());
+
+            switch (profession)
+            {
+                case "Athlete":
+                    {
+                        quantity = quantity* 0.70;
+                    }
+                    break;
+                case "Businessman":
+                case "Businesswoman":
+                    {
+                        quantity = quantity * 1.00;   
+                    }
+                    break;
+                case "SoftUni Student":
+                    {
+                        quantity = quantity * 1.70;
+                    }
+                    break;
+                default:
+                    {
+                        quantity = quantity * 1.20;
+                    }
+                    break;
+            }
+            Console.WriteLine($"The {profession} has to pay {quantity:F2}.");
+
+        }
+    }
+}
+    

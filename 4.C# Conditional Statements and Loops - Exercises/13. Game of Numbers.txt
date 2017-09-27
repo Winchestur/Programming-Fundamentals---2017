@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication103
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int m = int.Parse(Console.ReadLine());
+            int MaxBoundary = int.Parse(Console.ReadLine());
+
+            int result = 0;
+            int counts = 0;
+            for (int i = m; i >= n; i--)
+            {
+                for (int j = n; j <= m; j++)
+                {
+                    counts++;
+                    result = i+j;
+                    
+                    if (result == MaxBoundary)
+                    {
+                       
+                        Console.WriteLine($"Number found! {i} + {j} = {result}");
+                        break;
+                    }
+                    
+
+                }
+                if (result == MaxBoundary)
+               {
+                  
+                    break;
+               }
+            }
+            if (result < MaxBoundary||result>MaxBoundary)
+            {
+                
+                Console.WriteLine($"{counts} combinations - neither equals {MaxBoundary}");
+
+            }
+
+        }
+    }
+}
+
+        
+
+        
+        
+
+    
+
+                
+            
+                    
+                
+            
+        
+    
+

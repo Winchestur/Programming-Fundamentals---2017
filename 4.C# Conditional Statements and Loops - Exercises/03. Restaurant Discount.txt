@@ -1,0 +1,108 @@
+using System;
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+        {
+            int quantity = int.Parse(Console.ReadLine());
+
+            string package = Console.ReadLine();
+
+            int SmallHall = 2500;
+            int Terrace = 5000;
+            int GreatHall = 7500;
+
+            int Normal = 500;
+            int Gold = 750;
+            int Platinum = 1000;
+            double result = 0;
+
+            switch (package)
+            {
+                case "Normal":
+                    {
+                       if (quantity <= 50)
+                        {
+                            result = (SmallHall + Normal)*0.95/quantity;
+                            Console.WriteLine($"We can offer you the Small Hall");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                       else if (quantity > 50 && quantity <=100)
+                        {
+                            result = (Terrace + Normal) * 0.95 / quantity;
+                            Console.WriteLine($"We can offer you the Terrace");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                       else if (quantity > 100 && quantity< 120)
+                        {
+                            result = (GreatHall + Normal) * 0.95 / quantity;
+                            Console.WriteLine($"We can offer you the Great Hall");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                       else
+                        {
+                            Console.WriteLine("We do not have an appropriate hall.");
+                        }
+                    }
+                    break;
+                case "Gold":
+               
+                    {
+                        if (quantity <= 50)
+                        {
+                            result = (SmallHall + Gold) * 0.90 / quantity;
+                            Console.WriteLine($"We can offer you the Small Hall");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                        else if (quantity > 50 && quantity <= 100)
+                        {
+                            result = (Terrace + Gold) * 0.90 / quantity;
+                            Console.WriteLine($"We can offer you the Terrace");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                        else if (quantity > 100 && quantity < 120)
+                        {
+                            result = (GreatHall + Gold) * 0.90 / quantity;
+                            Console.WriteLine($"We can offer you the Great Hall");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                        else
+                        {
+                            Console.WriteLine("We do not have an appropriate hall.");
+                        }
+                    }
+                    break;
+                case "Platinum":
+                    {
+                        if (quantity <= 50)
+                        {
+                            result = (SmallHall + Platinum) * 0.85 / quantity;
+                            Console.WriteLine($"We can offer you the Small Hall");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                        else if (quantity > 50 && quantity <= 100)
+                        {
+                            result = (Terrace + Platinum) * 0.85 / quantity;
+                            Console.WriteLine($"We can offer you the Terrace");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                        else if (quantity > 100 && quantity < 120)
+                        {
+                            result = (GreatHall + Platinum) * 0.85 / quantity;
+                            Console.WriteLine($"We can offer you the Great Hall");
+                            Console.WriteLine($"The price per person is {result:F2}$");
+                        }
+                        else
+                        {
+                            Console.WriteLine("We do not have an appropriate hall.");
+                        }
+                    }
+                    break;
+               
+            }
+
+            
+        }
+    }
+}
+    

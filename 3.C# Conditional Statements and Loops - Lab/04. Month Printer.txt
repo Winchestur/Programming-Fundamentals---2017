@@ -1,0 +1,22 @@
+using System;
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+        {
+            try
+            {
+                int monthInteger = int.Parse(Console.ReadLine());
+
+                DateTime newDate = new DateTime(DateTime.Now.Month, monthInteger, 1);
+
+                Console.WriteLine(newDate.ToString("MMMM"));
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error!");
+            }
+        }
+    }
+}
+    

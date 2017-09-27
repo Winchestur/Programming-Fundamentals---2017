@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication103
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int first = int.Parse(Console.ReadLine());
+            int second = int.Parse(Console.ReadLine());
+
+            if (second - first < 5)
+            
+                {
+                    Console.WriteLine("No");
+
+                }
+                for (int firstnum = first; firstnum < second; firstnum++)
+                {
+
+
+                    for (int secondnum = first; secondnum <= second; secondnum++)
+                    {
+                        for (int thirdnum = first; thirdnum <= second; thirdnum++)
+                        {
+                            for (int fourthnum = first; fourthnum <= second; fourthnum++)
+                            {
+                                for (int fifthnum = first; fifthnum <= second; fifthnum++)
+                                {
+                                    if (firstnum < secondnum && secondnum < thirdnum && thirdnum < fourthnum && fourthnum < fifthnum)
+                                    {
+                                        Console.WriteLine($"{firstnum} {secondnum} {thirdnum} {fourthnum} {fifthnum}");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+        
+
+        
+        
+
+    
+
+                
+            
+                    
+                
+            
+        
+    
+

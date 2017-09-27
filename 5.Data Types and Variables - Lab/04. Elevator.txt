@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication105
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int FirstNum = int.Parse(Console.ReadLine());
+            int SecondNum = int.Parse(Console.ReadLine());
+
+            int count = 0;
+
+            while (FirstNum != 0)
+            {
+                count++;
+                FirstNum -= SecondNum;
+                if (FirstNum <= 0)
+                {
+                    Console.WriteLine(count);
+                    break;
+                }
+            }
+        }
+    }
+}

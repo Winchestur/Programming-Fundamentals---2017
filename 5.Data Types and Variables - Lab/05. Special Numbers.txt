@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication105
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            int all = 0;
+            int Number = 0;
+            bool TrueOrFalse = false;
+            for (int i = 1; i <= number; i++)
+            {
+                Number = i;
+                while (i > 0)
+                {
+                    all += i % 10;
+                    i = i / 10;
+                   
+                        
+                    
+                }
+                TrueOrFalse = (all == 5) || (all == 7) || (all == 11);
+                Console.WriteLine($"{Number} -> {TrueOrFalse}");
+                all = 0;
+               i = Number;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication105
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            decimal result = 0;
+
+            for (int i = 0; i < number; i++)
+            {
+
+                decimal number1 = decimal.Parse(Console.ReadLine());
+
+                result += number1;
+               
+            }
+            Console.WriteLine($"{result}");
+
+
+
+
+
+        }
+    }
+}

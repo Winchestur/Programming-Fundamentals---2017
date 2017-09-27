@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication100
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine();
+            int Volume = int.Parse(Console.ReadLine());
+            int Energy = int.Parse(Console.ReadLine());
+            int sugar = int.Parse(Console.ReadLine());
+
+            double resultenergy = ((double)Energy / 100) * Volume;
+            double resultsugar =((double)sugar *Volume)/100;
+            Console.WriteLine($"{Volume}ml {name}:");
+            Console.WriteLine($"{resultenergy}kcal, {resultsugar}g sugars ");
+           
+        }
+    }
+}

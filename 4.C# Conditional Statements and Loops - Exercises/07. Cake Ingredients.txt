@@ -1,0 +1,21 @@
+using System;
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+        {
+
+            string word = Console.ReadLine();
+            int count = 0;
+            while (word != "Bake!")
+            {
+
+                count++;
+                Console.WriteLine($"Adding ingredient {word}.");
+                word = Console.ReadLine();
+            }
+            Console.WriteLine($"Preparing cake with {count} ingredients.");
+        }
+    }
+}
+    
